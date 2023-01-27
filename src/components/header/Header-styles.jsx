@@ -1,15 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.header`
-  max-width: 800px;
-  margin: 0 auto;
+  border-bottom: 1px solid #e0e0e0;
 
   .container {
+    max-width: 1060px;
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin: 10px;
+    flex-wrap: wrap;
   }
 
   .logo {
@@ -18,6 +19,7 @@ export const Wrapper = styled.header`
     }
     display: flex;
     align-items: center;
+    margin-left: 10px;
     gap: 5px;
 
     p {
@@ -53,4 +55,4 @@ export const Wrapper = styled.header`
       }
     }
   }
-`;
+`
