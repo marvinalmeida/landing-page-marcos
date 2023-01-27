@@ -1,9 +1,10 @@
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
-import { Link } from "react-router-dom";
-import { Wrapper } from "./Header-styles";
+import ImportContactsIcon from '@mui/icons-material/ImportContacts'
+import { Link } from 'react-router-dom'
+import Footer from '../footer/Footer'
+import { Wrapper } from './Header-styles'
 
 const Header = () => {
-  const { pathname } = window.location;
+  const { pathname } = window.location
 
   return (
     <>
@@ -16,15 +17,30 @@ const Header = () => {
 
           <nav className="navegar">
             <ul>
-              <li><Link className={pathname === "/" ? "active" : ""} to="/">home</Link></li>
-              <li><Link className={pathname === "Sobre" ? "active" : ""} to="#">sobre</Link></li>
-              <li><Link className={pathname === "/artigos" ? "active" : ""}to="/artigos">artigos</Link></li>
+              <li>
+                <Link className={pathname === '/' ? 'active' : ''} to="/">
+                  home
+                </Link>
+              </li>
+              <li>
+                <Link className={pathname === 'Sobre' ? 'active' : ''} to="#">
+                  sobre
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={pathname === '/artigos' ? 'active' : ''}
+                  to="/artigos"
+                >
+                  artigos
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
       </Wrapper>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
