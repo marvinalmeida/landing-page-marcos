@@ -1,6 +1,5 @@
 import ImportContactsIcon from '@mui/icons-material/ImportContacts'
 import { Link } from 'react-router-dom'
-import Footer from '../footer/Footer'
 import { Wrapper } from './Header-styles'
 
 const Header = () => {
