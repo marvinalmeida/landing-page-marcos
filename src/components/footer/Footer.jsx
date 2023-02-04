@@ -1,21 +1,23 @@
-import React from 'react'
-import { Wrapper } from './Footer.styles'
-import WhatsAppIcon from '@mui/icons-material/WhatsApp'
-import FacebookIcon from '@mui/icons-material/Facebook'
+import Box from '@mui/material/Box'
 
 const Footer = () => {
   return (
-    <Wrapper>
-      <div className="container">
-        <div className="titulo">
-          <span>feito por: Marvin Almeida</span>
-        </div>
-        <div className="svg">
-          <WhatsAppIcon />
-          <FacebookIcon />
-        </div>
-      </div>
-    </Wrapper>
+    <>
+      <Box
+        component="footer"
+        sx={{
+          height: '120px',
+          fontSize: '12px',
+          backgroundColor: '#000000',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: '#ffff'
+        }}
+      >
+        <span>© 2023. Feito com ❤ pela equipe do Marvin.</span>
+      </Box>
+    </>
   )
 }
 
