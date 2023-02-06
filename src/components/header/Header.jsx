@@ -22,16 +22,19 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className={pathname === 'Sobre' ? 'active' : ''} to="#">
-                  sobre
-                </Link>
-              </li>
-              <li>
                 <Link
                   className={pathname === '/artigos' ? 'active' : ''}
                   to="/artigos"
                 >
                   artigos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={pathname === '/contato' ? 'active' : ''}
+                  to="/contato"
+                >
+                  contato
                 </Link>
               </li>
             </ul>

@@ -38,6 +38,7 @@ export const Wrapper = styled.header`
       margin: 20px;
       list-style: none;
       a {
+        padding: 20px 0px;
         text-decoration: none;
         text-transform: capitalize;
         font-size: 18px;
