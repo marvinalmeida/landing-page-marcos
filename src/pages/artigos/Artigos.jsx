@@ -2,8 +2,22 @@ import { Link } from 'react-router-dom'
 import Layout from '../../components/layout/Layout'
 import livrosMock from '../../mocks/livros.json'
 import { Wrapper } from './Artigos-styles'
+import { getAllArticles } from '../../services/artigos.services'
+import { useState, useEffect } from 'react'
 
 const Artigos = () => {
+  const [articles, setArticles] = useState([])
+
+  useEffect(() => {
+    getAllArticles()
+      .then(response => {
+        setArticles(response.data)
+      })
+      .catch(error => console.error(error))
+  }, [])
+
+  console.log(articles)
+
   return (
     <Layout>
       <Wrapper>
