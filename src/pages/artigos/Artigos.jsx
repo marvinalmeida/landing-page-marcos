@@ -1,35 +1,40 @@
-import { Link } from 'react-router-dom'
 import Layout from '../../components/layout/Layout'
-import livrosMock from '../../mocks/livros.json'
 import { Wrapper } from './Artigos-styles'
 import { getAllArticles } from '../../services/artigos.services'
 import { useState, useEffect } from 'react'
+import Container from '@mui/material/Container'
+import ActionAreaCard from '../../components/card/Card'
+import livrosMock from '../../mocks/livros.json'
 
 const Artigos = () => {
-  const [articles, setArticles] = useState([])
+  // const [articles, setArticles] = useState([])
 
-  useEffect(() => {
-    getAllArticles()
-      .then(response => {
-        setArticles(response.data)
-      })
-      .catch(error => console.error(error))
-  }, [])
-
-  console.log(articles)
+  // useEffect(() => {
+  //   getAllArticles()
+  //     .then(response => {
+  //       setArticles(response.data)
+  //     })
+  //     .catch(error => console.error(error))
+  // }, [])
 
   return (
     <Layout>
       <Wrapper>
-        <ul>
+        <Container
+          maxWidth="sm"
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            marginTop: '20px',
+            marginBottom: '20px',
+            gap: '40px'
+          }}
+        >
           {livrosMock.map(livro => (
-            <Link to={`/livro/${livro.id}`} key={livro.id}>
-              <img src={livro.frontCover} alt="capa do livro" />
-              <li>{livro.title}</li>
-              <li>{livro.author}</li>
-            </Link>
+            <ActionAreaCard key={livro.id} livro={livro} />
           ))}
-        </ul>
+        </Container>
       </Wrapper>
     </Layout>
   )
