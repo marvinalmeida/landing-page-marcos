@@ -21,7 +21,7 @@ const Artigos = () => {
     <Layout>
       <Wrapper>
         <Container
-          maxWidth="sm"
+          maxWidth="xl"
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -32,7 +32,9 @@ const Artigos = () => {
           }}
         >
           {livrosMock.map(livro => (
-            <ActionAreaCard key={livro.id} livro={livro} />
+            <>
+              <ActionAreaCard key={livro.id} livro={livro} />
+            </>
           ))}
         </Container>
       </Wrapper>

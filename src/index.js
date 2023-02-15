@@ -4,7 +4,7 @@ import GlobalStyles from '../src/styles/global'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Artigos from './pages/artigos/Artigos'
-import Contato from './pages/sobre/Contato'
+import Contato from './pages/contato/Contato'
 import Livro from './pages/livro/Livro'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
