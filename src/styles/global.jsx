@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   *, body {
@@ -7,12 +7,10 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box
   }
-  body, input, button {
+  body, input {
     font-family: 'Roboto', sans-serif;
-    background-color: #fcf8f8;
+    background-color: #eeeded;
     
   }
-  button {
-    cursor: pointer;
-  }
-`;
+  
+`

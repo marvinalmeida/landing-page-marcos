@@ -1,24 +1,37 @@
-import Layout from '../../components/layout/Layout'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import livrosMock from '../../mocks/livros.json'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Wrapper } from './Livros.styles'
+import HomeIcon from '@mui/icons-material/Home'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 const Livro = () => {
-  const params = useParams()
-
-  const livrosId = params.id
-
-  const getAllLivros = livrosMock.map(lv => lv.id)
-
-  if (livrosId === getAllLivros) {
-    console.log('a')
-    livrosMock.map(li => li.title)
-  }
+  const livrosData = JSON.parse(localStorage.getItem('livros') || '[]')
 
   return (
-    <Layout>
-      <ul></ul>
-    </Layout>
+    <Wrapper>
+      <div className="miniMenu">
+        <Link to="/artigos">
+          <ArrowBackIcon />
+        </Link>
+        <Link to="/">
+          <HomeIcon />
+        </Link>
+      </div>
+      <div className="detail">
+        <div className="detail__header">
+          <h1>{livrosData.title}</h1>
+        </div>
+        <div className="detail__infos">
+          <div className="detail__img">
+            <img src={livrosData.frontCover} />
+          </div>
+          <span className="detail__description">
+            {livrosData.content.map(li => li.introduction)}
+          </span>
+        </div>
+      </div>
+    </Wrapper>
   )
 }
+
 export default Livro

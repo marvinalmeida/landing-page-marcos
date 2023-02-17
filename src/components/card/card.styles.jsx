@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   a {
     text-decoration: none;
+    border: none;
   }
   .container {
     margin: 20px 20px;
@@ -46,5 +47,8 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  button {
+    border: none;
   }
 `
