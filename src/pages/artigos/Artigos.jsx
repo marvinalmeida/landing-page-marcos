@@ -7,15 +7,15 @@ import ActionAreaCard from '../../components/card/Card'
 import livrosMock from '../../mocks/livros.json'
 
 const Artigos = () => {
-  // const [articles, setArticles] = useState([])
+  const [articles, setArticles] = useState([])
 
-  // useEffect(() => {
-  //   getAllArticles()
-  //     .then(response => {
-  //       setArticles(response.data)
-  //     })
-  //     .catch(error => console.error(error))
-  // }, [])
+  useEffect(() => {
+    getAllArticles()
+      .then(response => {
+        setArticles(response.data)
+      })
+      .catch(error => console.error(error))
+  }, [])
 
   return (
     <Layout>

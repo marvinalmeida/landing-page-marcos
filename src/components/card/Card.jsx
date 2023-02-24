@@ -2,7 +2,7 @@ import * as React from 'react'
 import Card from '@mui/material/Card'
 import { Link } from 'react-router-dom'
 import { Wrapper } from './card.styles'
-import { useState } from 'react'
+
 
 export default function ActionAreaCard({ livro }) {
   const handleClick = li => {
