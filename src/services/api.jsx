@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://api-books-store.onrender.com/api/v1/api-docs/#/'
+  baseURL: 'https://api-articles-node.cyclic.app/api/v1/'
 })
 
 export default api

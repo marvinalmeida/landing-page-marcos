@@ -2,7 +2,15 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.header`
   border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  z-index: 100%;
+  top: 0px;
+  background-color: #e0e0e0;
 
+  svg {
+  }
   .container {
     max-width: 1060px;
     margin: 0 auto;
@@ -31,6 +39,9 @@ export const Wrapper = styled.header`
   }
 
   .navegar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
     ul {
       display: flex;
     }
